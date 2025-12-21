@@ -1,2 +1,1 @@
 # qa_python
-j
