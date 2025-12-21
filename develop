@@ -22,12 +22,12 @@ class TestBooksCollector:
         collector.add_new_book(name)
         assert name not in collector.books_genre
 
-   def test_add_new_book_duplicate(self, collector):
+    def test_add_new_book_duplicate(self, collector):
         collector.add_new_book("Книга")
         collector.add_new_book("Книга")
         assert len(collector.books_genre) == 1
 
-   def test_set_book_genre_book_not_exists(self, collector):
+    def test_set_book_genre_book_not_exists(self, collector):
         collector.set_book_genre("Неправильная", "Фантастика")
         assert "Неправильная" not in collector.books_genre
 
